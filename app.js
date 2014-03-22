@@ -8,7 +8,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes');
 var users = require('./routes/user');
-
+var db = require('./lib/db.js');
+db.check('Ben Gesoff', 1238);
 var app = express();
 
 // view engine setup
