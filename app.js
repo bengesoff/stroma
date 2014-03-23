@@ -6,7 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes');
+var web = require('./routes/web.js');
 var data = require('./lib/db.js').db;
 
 var app = express();
@@ -23,7 +23,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
-app.get('/', routes.index);
+app.get('/', web.index);
+// TODO: add other routes as completed
+// Test route 
 app.get('/test', function(req, res) {
     db.check('Ben Gesoff', 2211, function(result) {
         res.send(result);
@@ -60,6 +62,7 @@ app.use(function(err, req, res, next) {
     });
 });
 
+// Execute db constructor - connecting etc
 var db = new data(function() {
     console.log('connected to db');
 });
