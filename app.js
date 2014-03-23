@@ -25,7 +25,7 @@ app.use(app.router);
 
 app.get('/', routes.index);
 app.get('/test', function(req, res) {
-    data.check('Ben Gesoff', 2211, function() {
+    db.check('Ben Gesoff', 2211, function() {
         console.log('Success');
     });
 });
@@ -59,5 +59,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
+var db = new data(function() {
+    console.log('connected to db');
+});
 
 module.exports = app;
