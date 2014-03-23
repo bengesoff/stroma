@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 app.get('/', web.index);
+// TODO: add other routes as completed
 // Test route 
 app.get('/test', function(req, res) {
     db.check('Ben Gesoff', 2211, function(result) {
