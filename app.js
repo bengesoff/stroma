@@ -25,7 +25,7 @@ app.use(app.router);
 
 app.get('/', routes.index);
 app.get('/test', function(req, res) {
-    db.check('Ben Gesoff', 2211, function() {
+    data.check('Ben Gesoff', 2211, function() {
         console.log('Success');
     });
 });
