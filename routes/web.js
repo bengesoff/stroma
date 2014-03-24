@@ -1,10 +1,19 @@
+var data = require('../lib/db.js').db;
+
+// Execute db constructor - connecting etc
+var db = new data(function() {
+    console.log('connected to db');
+});
+
 /* GET home page. */
 exports.index = function(req, res){
   res.render('index', { title: 'Express' });
 };
 
 exports.check = function(req, res){
-	// TODO: do the DB and render result
+	db.check(req.body.username, req.body.pin, function(result) {
+		res.send('You are signed ' + result);
+	});
 };
 
 exports.signin = function(req, res){
