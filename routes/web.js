@@ -11,7 +11,9 @@ exports.index = function(req, res){
 };
 
 exports.check = function(req, res){
-	// TODO: do the DB and render result
+	db.check(req.query.username, req.query.pin, function(result) {
+		res.send('You are signed ' + result);
+	});
 };
 
 exports.signin = function(req, res){

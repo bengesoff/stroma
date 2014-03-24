@@ -7,7 +7,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var web = require('./routes/web.js');
-var data = require('./lib/db.js').db;
 
 var app = express();
 
@@ -24,14 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 app.get('/', web.index);
+app.get('/check', web.check);
 // TODO: add other routes as completed
-// Test route 
-app.get('/test', function(req, res) {
-    db.check('Ben Gesoff', 2211, function(result) {
-        res.send(result);
-        console.log('Success');
-    });
-});
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
