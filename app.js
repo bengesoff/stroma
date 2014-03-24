@@ -26,7 +26,7 @@ app.get('/', web.index);
 app.post('/check', web.check);
 // TODO: add other routes as completed
 
-/// catch 404 and forwarding to error handler
+// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
