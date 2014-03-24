@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
 app.get('/', web.index);
-app.get('/check', web.check);
+app.post('/check', web.check);
 // TODO: add other routes as completed
 
 /// catch 404 and forwarding to error handler

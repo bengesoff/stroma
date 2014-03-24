@@ -11,7 +11,7 @@ exports.index = function(req, res){
 };
 
 exports.check = function(req, res){
-	db.check(req.query.username, req.query.pin, function(result) {
+	db.check(req.body.username, req.body.pin, function(result) {
 		res.send('You are signed ' + result);
 	});
 };
