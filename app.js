@@ -62,9 +62,4 @@ app.use(function(err, req, res, next) {
     });
 });
 
-// Execute db constructor - connecting etc
-var db = new data(function() {
-    console.log('connected to db');
-});
-
 module.exports = app;
