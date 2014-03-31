@@ -6,8 +6,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes');
-var data = require('./lib/db.js').db;
+var web = require('./routes/web.js');
 
 var app = express();
 
@@ -23,15 +22,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(app.router);
 
-app.get('/', routes.index);
-app.get('/test', function(req, res) {
-    db.check('Ben Gesoff', 2211, function(result) {
-        res.send(result);
-        console.log('Success');
-    });
-});
+app.get('/', web.index);
+app.post('/check', web.check);
+// TODO: add other routes as completed
 
-/// catch 404 and forwarding to error handler
+// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
@@ -58,10 +53,6 @@ app.use(function(err, req, res, next) {
         message: err.message,
         error: {}
     });
-});
-
-var db = new data(function() {
-    console.log('connected to db');
 });
 
 module.exports = app;
