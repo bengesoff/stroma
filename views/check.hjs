@@ -4,6 +4,6 @@
   </head>
   <body>
     <h1>{{ title }}</h1>
-    <p>You are signed {{ signedin }}. Click <a href="/sign{{ notsignedin }}">here</a> to sign in.</p>
+    <p>You are signed {{ signedin }}. Click <a href="/sign{{ notsignedin }}">here</a> to sign {{ notsignedin }}.</p>
   </body>
 </html>
