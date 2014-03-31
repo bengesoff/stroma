@@ -12,7 +12,14 @@ exports.index = function(req, res){
 
 exports.check = function(req, res){
 	db.check(req.body.username, req.body.pin, function(result) {
-		res.send('You are signed ' + result);
+		var notresult = null;
+		if(result == 'in') {
+			notresult = 'out';
+		}
+		else if (result == 'out') {
+			notresult = 'in';
+		}
+		res.render('check', { title: 'Stroma', signedin: result, notsignedin: notresult });
 	});
 };
 
