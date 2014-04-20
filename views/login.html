@@ -1,24 +1,28 @@
+<!-- Page source and design COPYRIGHT (C) Alexander Gill 2014. All rights reserved. -->
 <!doctype html>
 <html>
- <link rel='stylesheet' href='/stylesheets/style.css' />
  <head>
+     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+     <link rel="stylesheet" href="stylesheets/login_box.css" type="text/css">
  	<meta charset="utf-8">
    <title>Stroma - Log in to Stroma</title>
- </head>
+</head>
  <body>
-   <div class="background">
-   <div class="login_box" id="login_box" align="center">
-     <div style="height: 80px; margin-top: 35px; font-family: Baroque Script; color: white; font-size: 40px">
+ <!--[if IE]>
+    <div id="ie_warning" align="center">Stroma was not developed to work with Internet Explorer. Some features may not work as expected. <a href="http://gillyandgesoff.tk/post/83198014812/why-doesnt-stroma-look-right-in-internet-explorer">Find out more.</a></div>
+<![endif]-->
+   <div class="container" id="container" align="center">
+     <div class="title" style="">
        Stroma
      </div>
-     <div class="title_header" align="center">Log in to Stroma</div>
+     <div class="description" align="center">Log in to Stroma</div>
      <div>
-       <form>
+       <form action="check.html">
        <div style="height:30px; margin-top: 27px">
-      <input placeholder=" username" type="email" id="log_in_gear">
+      <input class="username" placeholder="username" autocorrect="off" autocapitalize="off" autofocus>
        </div>
        <div style="height:30px; margin-top: 20px">
-      <input placeholder=" password" type="password">
+      <input class="password" placeholder="password" type="password">
        </div>
        <div style="height: 30px; margin-top:35px;">
          <button>Log in to Stroma</button>
@@ -26,13 +30,7 @@
        </form>
      </div>
    </div>
+   <div class="footer_light">Stroma allows students to sign in and out of school from their browser. <a href="http://gillyandgesoff.tk/post/80366449302/what-is-stroma" style="color:#9c9c9c" target="_newtab">Find out more.</a>
    </div>
-
-   <div id="footer_background">
-   </div>
-   
-   <div id="footer_text" align="center">Stroma allows students to sign in and out of school from their browser. <a href="http://gillyandgesoff.tk" style="color: #9c9c9c" target="_newtab">Find out more.</a>
-   </div>
-   
  </body>
 </html>
