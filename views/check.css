@@ -6,10 +6,12 @@
 
 #sign_in_gear{
     display: none;
+    cursor: pointer;
 }
 
 #sign_out_gear{
     display: none;
+    cursor: pointer;
 }
 
 img{
