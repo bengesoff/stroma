@@ -18,7 +18,16 @@ input.username, input.password{
     color: #860491;
 }
 
-
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px)
+{
+    #login_box{
+        -webkit-transition: all 0.20s ease-in-out;
+        -moz-transition: all 0.20s ease-in-out;
+        -o-transition: all 0.20s ease-in-out;
+    }
+}
 @media screen
     and (min-device-width : 320px)
     and (max-device-width : 480px)
@@ -32,7 +41,8 @@ input.username, input.password{
 /*KEEP ME SIGNED IN*/
 div.checkbox{
     display: block;
-    margin-top: 25px;
+    margin-top: 12px;
+    margin-bottom: 12px;
     height: 21px;
     width: 180px;
 }
@@ -40,6 +50,9 @@ div.checkbox{
     display: none;
 }
 label.checkbox_label{
+    -webkit-transition: all 0.10s ease-in-out;
+    -moz-transition: all 0.10s ease-in-out;
+    -o-transition: all 0.10s ease-in-out;
     display: block;
     cursor: pointer;
     width: 19px;
@@ -50,7 +63,9 @@ label.checkbox_label{
 }
 #text_label{
     font-size: 12px;
+    color: #ccc;
     margin-left: 20px;
+    cursor: pointer;
 }
 #keep_signed_in:checked + label.checkbox_label{
     border: 2px solid #ccc;
