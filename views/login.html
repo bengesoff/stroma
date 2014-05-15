@@ -1,30 +1,36 @@
 <!-- Page source and design COPYRIGHT (C) Alexander Gill 2014. All rights reserved. -->
 <!doctype html>
 <html>
- <head>
-     <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
-     <link rel="stylesheet" href="stylesheets/login.css" type="text/css">
- 	<meta charset="utf-8">
-   <title>Stroma - Log in to Stroma</title>
-</head>
- <body>
- <!--[if IE]>
-    <div id="ie_warning" align="center">Stroma was not developed to work with Internet Explorer. Some features may not work as expected. <a href="http://gillyandgesoff.tk/post/83198014812/why-doesnt-stroma-look-right-in-internet-explorer">Find out more.</a></div>
+    <head>
+        <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+        <link rel="stylesheet" href="stylesheets/login.css" type="text/css">
+        <meta charset="utf-8">
+        <title>Stroma - Log in to Stroma</title>
+    </head>
+    <body>
+        <!--[if IE]>
+<div id="ie_warning" align="center">Stroma was not developed to work with Internet Explorer. Some features may not work as expected. <a href="http://gillyandgesoff.tk/post/83198014812/why-doesnt-stroma-look-right-in-internet-explorer">Find out more.</a></div>
 <![endif]-->
-   <div class="container" id="container" align="center">
-     <div class="title" style="">
-       Stroma
-     </div>
-     <h3>Log in to Stroma</h3>
-     <div>
-       <form action="check.html" style="max-width:300px;margin-top:20px">
-      <input class="username" placeholder="username" autocorrect="off" autocapitalize="off" autofocus>
-      <input class="password" placeholder="password" type="password">
-         <button>Log in to Stroma</button>
-       </form>
-     </div>
-   </div>
-   <div class="footer_light">Stroma allows students to sign in and out of school from their browser. <a href="http://gillyandgesoff.tk/post/80366449302/what-is-stroma" style="color:#9c9c9c" target="_newtab">Find out more.</a>
-   </div>
- </body>
+        <div class="container" id="login_box" align="center">
+            <div class="title">
+                Stroma
+            </div>
+            <h3>Log in to Stroma</h3>
+            <div>
+                <form action="check.html" style="max-width:300px;margin-top:0px">
+                    <input class="username" placeholder="username" autocorrect="off" autocapitalize="off" autofocus>
+                    <input class="password" placeholder="password" type="password">
+                    <button>Log in to Stroma</button>
+                    <div class="checkbox">
+                        <input type="checkbox"  id="keep_signed_in" checked>
+                        <label class="checkbox_label" for="keep_signed_in">
+                        </label>
+                        <p id="text_label">Keep me signed in, please.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="footer_light">Stroma allows students to sign in and out of school from their browser. <a href="http://gillyandgesoff.tk/post/80366449302/what-is-stroma" style="color:#9c9c9c" target="_newtab">Find out more.</a>
+        </div>
+    </body>
 </html>
