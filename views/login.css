@@ -14,8 +14,19 @@ div.description{
     color: white;
     font-size: 60px;
 }
-input.username{
+input.username, input.password{
     color: #860491;
+}
+
+
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px)
+    and (orientation : portrait)
+{
+    #login_box{
+        -webkit-transform: scale(2);
+    }
 }
 
 /*KEEP ME SIGNED IN*/
