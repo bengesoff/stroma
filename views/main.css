@@ -1,11 +1,23 @@
 /*Page source and design COPYRIGHT (C) Alexander Gill 2014. All rights reserved.*/
 body{
     background: linear-gradient(#5F0AA2, #860491) no-repeat center center fixed; 
-    /*#5F0AA2, #860491*/
     margin: 0;
     padding: 0;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
+/* SYSTEM COLOURS:
+Main background and UI borders: #860491;
+Green:                          #0F9104;
+Container backgrounds:          #000;
+
+Background gradients:           #5F0AA2, #860491;
+
+Important text:                 #fff;
+Body text:                      #ccc;
+
+ON:                             #860491;
+OFF:                            #0F9104;
+*/
 
 #ie_warning{
     background-color: #e8b743;
@@ -164,7 +176,7 @@ p{
 }
 
 /*INPUTS*/
-input{
+input[class=username],[class=password]{
     -webkit-transition: all 0.20s ease-in-out;
     -moz-transition: all 0.20s ease-in-out;
     -o-transition: all 0.20s ease-in-out;
@@ -179,7 +191,7 @@ input{
     box-shadow: none;
     margin-top: 25px;
 }
-input:focus{
+input.username:focus,input.password:focus{
     border: 1px solid #000;
     padding: 3px 3px 3px 3px;
     height: 25px;
