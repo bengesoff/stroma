@@ -3,7 +3,6 @@
 <html>
     <head>
         <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
-        <link rel="stylesheet" href="">
         <title>Change your PIN. - Stroma</title>
     </head>
     <body>
@@ -15,21 +14,21 @@
                     </div>
             </div>
             <div class="contents_box">
-                <form style="width:300px;margin-left:auto;margin-right:auto" align="center">
+                <form style="margin-left:auto;margin-right:auto" align="center">
                     <h2 style="padding:0;display:block">Enter your current PIN:</h2>
-                    <input placeholder="current PIN" class="pin" type="password" pattern="[0-9]{4}">
+                    <input placeholder="current PIN" class="pin" type="password" pattern="[0-9]*" maxlength="4">
                     <h2 style="padding:0;display:block">Choose a new 4-digit PIN:</h2>
-                    <input placeholder="choose a new PIN" class="pin" type="password" pattern="[0-9]{4}">
+                    <input placeholder="choose a new PIN" class="pin" type="password" pattern="[0-9]*" maxlength="4">
                     <h2 style="padding:0;display:block" type="password">Enter your new PIN again:</h2>
-                    <input placeholder="confirm your new PIN" class="pin" type="password" pattern="[0-9]{4}">
+                    <input placeholder="confirm your new PIN" class="pin" type="password" pattern="[0-9]*" maxlength="4">
                     <h2 style="padding:0;display:block">Hit that 'Confirm' button.</h2>
-                    <button style="border:2px solid #0F9104" type="submit">Confirm</button>
+                    <button class="green" type="submit">Confirm</button>
                     <h2 style="padding:0;display:block;margin-top:25px">Or not...</h2>
-                    <button>Cancel</button>
+                    <button class="red">Cancel</button>
                 </form>
             </div>
         </div>
-        <div class="footer_hidden">The Stroma Project, by Ben Gesoff and Alex Gill. Page design and source code Copyright © Alex Gill, 2014. All rights reserved. Have a great day :)
+        <div class="footer_hidden"><p>The Stroma Project, by Ben Gesoff and Alex Gill. Page design and source code Copyright © Alex Gill, 2014. All rights reserved. Have a great day :)</p>
         </div>
     </body>
 </html>
