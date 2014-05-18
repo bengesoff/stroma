@@ -7,43 +7,54 @@ div.description{
      color: #d6d6d6;
 }
 .title{
-    height: 80px;
+    min-height: 80px;
     margin-top: 35px;
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 300;
     color: white;
     font-size: 60px;
 }
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 640px){
+        .title{
+            font-size: 120px;
+            margin-top: 70px;
+        }
+    }
 input.username, input.password{
     color: #860491;
 }
 
 @media screen
     and (min-device-width : 320px)
-    and (max-device-width : 480px)
-{
-    #login_box{
-        -webkit-transition: all 0.20s ease-in-out;
-        -moz-transition: all 0.20s ease-in-out;
-        -o-transition: all 0.20s ease-in-out;
+    and (max-device-width : 640px){
+        #login_box{
+            -webkit-transition: all 0.20s ease-in-out;
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            top: 45%;
+            left: 50%;
+            margin-top: -400px;
+            margin-left: -400px;
+            border-radius: 120px;
+        }
     }
-}
 @media screen
     and (min-device-width : 320px)
-    and (max-device-width : 480px)
-    and (orientation : portrait)
-{
-    #login_box{
-        -webkit-transform: scale(2);
+    and (max-device-width : 640px)
+    and (orientation : landscape){
+        #login_box{
+            -webkit-transform: scale(0.5);
+        }
     }
-}
-
 /*KEEP ME SIGNED IN*/
 div.checkbox{
     display: block;
-    margin-top: 12px;
-    margin-bottom: 12px;
-    height: 21px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 30px;
     width: 180px;
 }
 #keep_signed_in{
@@ -55,26 +66,27 @@ label.checkbox_label{
     -o-transition: all 0.10s ease-in-out;
     display: block;
     cursor: pointer;
-    width: 19px;
-    height: 19px;
+    width: 28px;
+    height: 28px;
     border: 2px solid #860491; border-radius: 5px;
     position: absolute;
     background-color: #000;
 }
 #text_label{
-    font-size: 12px;
+    display: block;
     color: #ccc;
-    margin-left: 20px;
+    margin-left: 35px;
     cursor: pointer;
+    text-align: left;
 }
 #keep_signed_in:checked + label.checkbox_label{
-    border: 2px solid #ccc;
+    border-color: #ccc;
     background-color: #0F9104;
 }
 label.checkbox_label:after{
     content: ": (";
     font-family: inherit;
-    font-size: 12px;
+    font-size: 18px;
     color: #860491;
     position: absolute;
     bottom: 0;
@@ -87,3 +99,27 @@ label.checkbox_label:after{
     content: ": )";
     color: #ccc;
 }
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 640px){
+        div.checkbox{
+            margin-top: 30px;
+            height: 60px;
+            width: 420px;
+        }
+        #text_label{
+            margin-left: 70px;
+        }
+        label.checkbox_label{
+            width: 44px;
+            height: 44px;
+            border-radius: 20px;
+            border-width: 8px;
+            background-color: #860491;
+        }
+        label.checkbox_label:after{
+            font-size: 30px;
+            color: #000;
+        }
+        
+    }
