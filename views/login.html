@@ -15,15 +15,15 @@
             </div>
             <h3>Log in to Stroma</h3>
             <div>
-                <form action="check.html" style="max-width:300px;margin-top:0px">
+                <form action="check.html" style="margin-top:0px">
                     <input class="username" placeholder="username" autocorrect="off" autocapitalize="off" autofocus>
-                    <input class="pin" placeholder="pin" type="password" pattern="[0-9]{4}">
-                    <button>Log in to Stroma</button>
+                    <input class="pin" placeholder="PIN" type="password" pattern="[0-9]*" maxlength="4">
+                    <button class="red" type="submit">Log in to Stroma</button>
                     <div class="checkbox">
                         <input type="checkbox"  id="keep_signed_in" checked>
                         <label class="checkbox_label" for="keep_signed_in">
                         </label>
-                        <label id="text_label" for="keep_signed_in">Keep me signed in, please.</label>
+                        <label id="text_label" for="keep_signed_in"><p>Keep me signed in, please.</p></label>
                     </div>
                 </form>
             </div>
