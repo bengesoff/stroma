@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="main.css" type="text/css">
+        <link rel="stylesheet" href="check.css" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="check.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="gear hidden" id="signedOut" align="center" onTouchEnd="fadeOut(this);signIn();" onclick="fadeOut(this);signIn();">
+                <h1 class="notice_top">You are signed out.</h1>
+                <p class="notice_center" style="color:#860491;bottom:23%;font-size:230px;">Out</p>
+                <h1 class="notice_bottom">Tap to sign in.</h1>
+            </div>
+            <div class="gear hidden" id="signedIn" align="center" onTouchEnd="fadeOut(this);signOut();" onclick="fadeOut(this);signOut();">
+                <h1 class="notice_top">You are signed in.</h1>
+                <p class="notice_center" style="color:#0f9104;bottom:8%;font-size:360px">In</p>
+                <h1 class="notice_bottom">Tap to sign out.</h1>
+            </div>
+            <div class="gear hidden" id="errorGear" onClick="fadeOut(this);retrieveStatus()" onTouchEnd="fadeOut(this);retrieveStatus()">
+                <h1 class="notice_top">Something's gone wrong.</h1>
+                <p class="notice_center" style="font-size:400px;bottom:18%;color:#dddd20">!</p>
+                <h1 class="notice_bottom">Sorry about this.<br><br>Please sign in or out manually.</h1>
+            </div>
+        </div>
+        <script>
+            loadGear();
+        </script>
+    </body>
+</html>

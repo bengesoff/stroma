@@ -1,0 +1,311 @@
+/*Page source and design COPYRIGHT (C) Alexander Gill 2014. All rights reserved.*/
+body{
+    background: linear-gradient(#5F0AA2, #860491) no-repeat center center fixed; 
+    margin: 0;
+    padding: 0;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+/* SYSTEM COLOURS:
+Main background and UI borders: #860491;
+Green:                          #0F9104;
+Container backgrounds:          #000;
+
+Background gradients:           #5F0AA2, #860491;
+
+Important text:                 #fff;
+Body text:                      #ccc;
+
+ON:                             #860491;
+OFF:                            #0F9104;
+*/
+
+/*INTERNET EXPLORER SPECIFIC WARNING*/
+#ie_warning{
+    background-color: #e8b743;
+    position: fixed;
+    top: 0%;
+    left: 10%;
+    margin-top: 10px;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid #000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
+}
+/*DO NOT DISPLAY IN WEBKIT*/
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    #ie_warning{
+        display: none;
+    }
+}
+/*DO NOT DISPLAY IN FIREFOX*/
+@-moz-document url-prefix() {
+    #ie_warning{
+        display: none;
+    }
+}
+/*DO NOT DISPLAY IN OPERA*/
+@supports (border-radius: 0px){
+    #ie_warning{
+        display: none;
+    }
+}
+
+.container{
+    position: absolute;
+    background-color: #000;
+    top: 45%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-left: -200px;
+    margin-top: -200px;
+    border-radius: 60px;
+    box-shadow: 0px 15px 150px;
+    z-index: 2;
+}
+
+/*.page{
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}*/
+
+.wrapper{
+    width: 1000px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 100px;
+}
+
+
+/*TITLES*/
+.title_box{
+    width: 100%;
+    background: rgba(0,0,0,1);
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 60px rgba(0,0,0,1);
+    text-align: center;
+}
+
+/*CONTENTS*/
+.contents_box{
+    margin-top: 50px;
+    min-height: 100px;
+    background: rgba(0,0,0,1);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 30px;
+    box-shadow: 0px 20px 60px rgba(0,0,0,1);
+    /*margin-bottom: 100px;*/
+}
+
+/*MAIN TEXT*/
+
+/*DESKTOP*/
+h1{
+    text-decoration: none;
+    color: #FFF;
+    margin: 0;
+    font-weight: 300;
+    font-size: 30px;
+}  
+      
+h2{
+    text-decoration: none;
+    color: #FFF;
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+      
+h3{
+    padding-left: 5px;
+    text-decoration: none;
+    color: #CCC;
+    margin: 0;
+    font-weight: 300;
+    font-size: 20px;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+  
+p{
+    text-decoration: none;
+    margin: 0;
+    color: #CCC;
+    font-weight: 300;
+    font-size: 14px;
+    display:inline-block;
+    padding-bottom: 20px;
+}
+/*MOBILE*/
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 640px)
+{
+    h1{
+        font-size: 80px;
+    }
+    h2{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 50px;
+    }
+    p{
+        font-size: 30px;
+    }
+}
+
+/*FOOTERS*/
+.footer_light{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    font-size: 14px;
+    color: rgb(145, 145, 145);
+    text-align: center;
+    z-index: 0;
+}
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px)
+    and (orientation : portrait)
+{
+    .footer_light{
+        font-size: 40px;
+        padding-bottom: 15px;
+    }
+        
+}
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 480px)
+    and (orientation : landscape)
+{
+    .footer_light{
+        font-size: 20px;
+    }
+}
+
+.footer_hidden{
+    display: inline-block;
+    position: fixed;
+    bottom: 0%;
+    min-height: 23px;
+    color: #ccc;
+    text-align: center;
+    z-index: -1;
+    padding-bottom: 10px;
+}
+@media (max-width: 1112px){
+    .footer_hidden{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+@media (min-width: 1112px){
+    .footer_hidden{
+        width: 1000px;
+        left: 50%;
+        margin-left: -500px;
+    }
+}
+
+/*INPUTS*/
+input.username,input.pin{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: all  0.20s ease-in-out;
+    -moz-transition: all 0.20s ease-in-out;
+    -o-transition: all 0.20s ease-in-out;
+    height: 30px;
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 0px 5px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #000;
+    box-shadow: none;
+}
+input.username:focus,input.pin:focus{
+    height: 38px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 6px #860491;
+    font-size: 18px;
+}
+button{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 30px;
+    width: 180px;
+    background: #000;
+    color: #fff;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 15px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+}
+button.red{
+    border-color: #860491;
+}
+button.green{
+    border-color: #0F9104;
+}
+@media screen
+    and (min-device-width : 320px)
+    and (max-device-width : 640px)
+{
+    input.username, input.pin, input.username:focus, input.pin:focus{
+        height: 60px;
+        width: 400px;
+        border-radius: 20px;
+        font-size: 30px;
+        padding: 0px 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    button{
+        height: 60px;
+        width: 420px;
+        border-radius: 20px;
+        font-size: 30px;
+        border: none;
+    }
+    button.red{
+        background: #860491;
+    }
+    button.green{
+        background: #0F9104;
+    }
+}

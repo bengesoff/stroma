@@ -1,9 +1,17 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Stroma</title>
-	</head>
-	<body>
-		<h1>Stroma</h1>
-		<p>Welcome to the homepage of Stroma.</p>
-	</body>
+    <head>
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <script type="text/javascript">
+            var userId = localStorage.getItem("userId");
+            if (userId == null) {
+                window.location.replace("login.html");
+            }
+            else {
+                window.location.replace("check.html");
+            }
+        </script>
+    </body>
 </html>

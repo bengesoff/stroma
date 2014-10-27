@@ -1,4 +1,4 @@
-webapp
-=========
+stromamobile
+============
 
-This is where all the html, css and js should go.
+The mobile apps for <a href="http://github.com/bengesoff/stroma">Stroma</a>.
